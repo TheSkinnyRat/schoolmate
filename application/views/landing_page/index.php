@@ -178,8 +178,9 @@
 
     <div id="footer">
       <div class="text-center">
-      <?php echo $sql_query; ?>
-    </div>
+        &copy; Schoolmate Project 2017
+      <!-- <?php echo $sql_query; ?>
+ -->    </div>
     </div>
     <!-- FOOTER SECTION END-->
 

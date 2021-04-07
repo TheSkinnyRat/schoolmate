@@ -1,14 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.7.4
+-- version 5.1.0
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 07 Des 2018 pada 13.06
--- Versi Server: 10.1.30-MariaDB
--- PHP Version: 5.6.33
+-- Generation Time: Apr 07, 2021 at 04:07 PM
+-- Server version: 10.4.18-MariaDB
+-- PHP Version: 8.0.3
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -25,7 +24,7 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `tbl_admin`
+-- Table structure for table `tbl_admin`
 --
 
 CREATE TABLE `tbl_admin` (
@@ -36,16 +35,16 @@ CREATE TABLE `tbl_admin` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `tbl_admin`
+-- Dumping data for table `tbl_admin`
 --
 
 INSERT INTO `tbl_admin` (`id`, `nama`, `username`, `password`) VALUES
-(1, 'admin', 'admin', 'rlLGDHRgSvB7Zp0ubOVUlCtDCwk5q6bhanCwhLB1DPOy7urqIy6Ybxmo6pet9CiPoDR3NKgC8pEJZknp3qjO8g==');
+(1, 'admin', 'admin', 'UTYEYlY/AD1UOA==');
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `tbl_berita`
+-- Table structure for table `tbl_berita`
 --
 
 CREATE TABLE `tbl_berita` (
@@ -57,7 +56,7 @@ CREATE TABLE `tbl_berita` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `tbl_berita`
+-- Dumping data for table `tbl_berita`
 --
 
 INSERT INTO `tbl_berita` (`id_berita`, `id_pengajar`, `judul_post`, `isi_post`, `tgl_post`) VALUES
@@ -69,7 +68,7 @@ INSERT INTO `tbl_berita` (`id_berita`, `id_pengajar`, `judul_post`, `isi_post`, 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `tbl_guru`
+-- Table structure for table `tbl_guru`
 --
 
 CREATE TABLE `tbl_guru` (
@@ -85,18 +84,16 @@ CREATE TABLE `tbl_guru` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `tbl_guru`
+-- Dumping data for table `tbl_guru`
 --
 
 INSERT INTO `tbl_guru` (`id_guru`, `nip`, `password`, `nama`, `tempat_lahir`, `tanggal_lahir`, `email`, `no_tlp`, `jenis_kelamin`) VALUES
-(2, 1000000, 'otvIfqyOKTEelqarLJBFeDVEFEEecdrgexBRsWUqizteHKuJHmcpNCbOCwmo4X0ngETadujkxZvBlKNubtx1Gg==', 'azra    ', 'bogor    ', '2001-12-12', 'azra@gmail.com', '02147483647   ', 'L'),
-(3, 12345, 'otvIfqyOKTEelqarLJBFeDVEFEEecdrgexBRsWUqizteHKuJHmcpNCbOCwmo4X0ngETadujkxZvBlKNubtx1Gg==', 'rio  ', 'bogor  ', '2001-12-12', 'yudaduy01@gmail.com', '08102381123  ', 'P'),
-(8, 0, 'fbYTHztA1jPKFX7ZwWv8OS5YOk/9sgZFOAhvtUBs6XysXqIDhpnfIWAYRgW6Mur3MeVYZGRRFIAGlOAjuVTCnQ==', 'Purwa Sabrang Ramadhan', 'Tokyo', '2019-01-01', 'psr@email.com', '081234567890', 'L');
+(8, 0, 'AWAFclEnByY=', 'Purwa Sabrang Ramadhan', 'Tokyo', '2019-01-01', 'psr@email.com', '081234567890', 'L');
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `tbl_kelas`
+-- Table structure for table `tbl_kelas`
 --
 
 CREATE TABLE `tbl_kelas` (
@@ -105,7 +102,7 @@ CREATE TABLE `tbl_kelas` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `tbl_kelas`
+-- Dumping data for table `tbl_kelas`
 --
 
 INSERT INTO `tbl_kelas` (`id_kelas`, `kelas`) VALUES
@@ -115,7 +112,7 @@ INSERT INTO `tbl_kelas` (`id_kelas`, `kelas`) VALUES
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `tbl_kirim_tugas`
+-- Table structure for table `tbl_kirim_tugas`
 --
 
 CREATE TABLE `tbl_kirim_tugas` (
@@ -128,7 +125,7 @@ CREATE TABLE `tbl_kirim_tugas` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `tbl_kirim_tugas`
+-- Dumping data for table `tbl_kirim_tugas`
 --
 
 INSERT INTO `tbl_kirim_tugas` (`id_kirim_tugas`, `id_tugas`, `id_siswa`, `nama_file`, `direktori`, `waktu_upload`) VALUES
@@ -138,7 +135,7 @@ INSERT INTO `tbl_kirim_tugas` (`id_kirim_tugas`, `id_tugas`, `id_siswa`, `nama_f
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `tbl_komentar`
+-- Table structure for table `tbl_komentar`
 --
 
 CREATE TABLE `tbl_komentar` (
@@ -153,7 +150,7 @@ CREATE TABLE `tbl_komentar` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `tbl_komentar`
+-- Dumping data for table `tbl_komentar`
 --
 
 INSERT INTO `tbl_komentar` (`id_komentar`, `id_berita`, `id_tugas`, `id_video`, `id_guru`, `id_siswa`, `nama`, `isi_komentar`) VALUES
@@ -175,7 +172,7 @@ INSERT INTO `tbl_komentar` (`id_komentar`, `id_berita`, `id_tugas`, `id_video`, 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `tbl_mapel`
+-- Table structure for table `tbl_mapel`
 --
 
 CREATE TABLE `tbl_mapel` (
@@ -184,7 +181,7 @@ CREATE TABLE `tbl_mapel` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `tbl_mapel`
+-- Dumping data for table `tbl_mapel`
 --
 
 INSERT INTO `tbl_mapel` (`id_mapel`, `nama_mapel`) VALUES
@@ -196,7 +193,7 @@ INSERT INTO `tbl_mapel` (`id_mapel`, `nama_mapel`) VALUES
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `tbl_pengajar`
+-- Table structure for table `tbl_pengajar`
 --
 
 CREATE TABLE `tbl_pengajar` (
@@ -207,7 +204,7 @@ CREATE TABLE `tbl_pengajar` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `tbl_pengajar`
+-- Dumping data for table `tbl_pengajar`
 --
 
 INSERT INTO `tbl_pengajar` (`id_pengajar`, `nip`, `id_mapel`, `id_kelas`) VALUES
@@ -221,7 +218,7 @@ INSERT INTO `tbl_pengajar` (`id_pengajar`, `nip`, `id_mapel`, `id_kelas`) VALUES
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `tbl_posting_admin`
+-- Table structure for table `tbl_posting_admin`
 --
 
 CREATE TABLE `tbl_posting_admin` (
@@ -235,7 +232,7 @@ CREATE TABLE `tbl_posting_admin` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `tbl_posting_admin`
+-- Dumping data for table `tbl_posting_admin`
 --
 
 INSERT INTO `tbl_posting_admin` (`id_posting`, `id`, `judul_post`, `isi_post`, `direktori`, `tgl_post`, `status`) VALUES
@@ -245,7 +242,7 @@ INSERT INTO `tbl_posting_admin` (`id_posting`, `id`, `judul_post`, `isi_post`, `
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `tbl_siswa`
+-- Table structure for table `tbl_siswa`
 --
 
 CREATE TABLE `tbl_siswa` (
@@ -262,21 +259,16 @@ CREATE TABLE `tbl_siswa` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `tbl_siswa`
+-- Dumping data for table `tbl_siswa`
 --
 
 INSERT INTO `tbl_siswa` (`id_siswa`, `nis`, `password`, `nama`, `tempat_lahir`, `tanggal_lahir`, `email`, `no_tlp`, `jenis_kelamin`, `id_kelas`) VALUES
-(10, 1016007004, 'sMYK8TohGweUuGXuzJbchSCnHWiGkd0kitM6zh0g92tm52IGDxK7SKnoszxCX30LudeH3LhXjdNfYngFotdlDw==', 'aduy   ', 'bogor   ', '2001-12-12', 'yudaduy01@gmail.com', '081319792059   ', 'L', 1),
-(12, 1016007006, 'tpycCZ4+nLF7QIu5WZK0HFCD5ry08Gu5NRxsJp4D9fwrZhPPlv4TDB6JwgFkzDhRxKYEUpTS/E38ll/V/bqDCg==', 'siswa', 'bogor', '2001-12-12', 'yudaduy01@gmail.com', '08102381123', 'L', 1),
-(13, 1016007007, 'UmA7Md4zdpjWABY29hm+EzL6+MXzkox9bOElcwmhpO9R/ELu3kYxidWPXVf3YRndGHn12FE/Rv4PWAZaM1Ishw==', 'babam', 'citayem', '2001-12-12', 'yudaduy01@gmail.com', '08102381123', 'L', 2),
-(14, 1016007008, 'nZ5Me17+YeNk5VW3WW+DIMirtHwj8mD2dtFKjWhrCpe+COGdYhK73mlBnGrVQ1ZKUJE2Iz1bCgFc5cw+Qjfgbg==', 'panca  ', 'cibinong  ', '2001-12-12', 'yudaduy01@gmail.com', '08102381123  ', 'L', 2),
-(15, 0, '83NXbpiw6EXlMGZEAK5ah/detjQ6OHAnNMMuaSqbEeZJdegQ4r/coZ3RGhXWpbLNZgqH8epiaDfFF66Go8+01g==', 'p', 'pp', '2018-12-06', 'p@p', '0893', 'P', 2),
-(16, 1, '+MTEZ4ukfCYvJ4g1ypUY6n/CqDWMG6dFKLoWchglTXz8xLZTNxNy4qbWCBInxE3iLk4N3fLz6f8UJrhZ3pTBog==', 'qq', 'qqq', '2018-12-07', 'q@q', '145', 'L', 1);
+(15, 0, 'UCVWPQVyBiVSMQ==', 'Siswa', 'Jakarta', '2018-12-06', 'p@p', '0893', 'P', 2);
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `tbl_status_posting`
+-- Table structure for table `tbl_status_posting`
 --
 
 CREATE TABLE `tbl_status_posting` (
@@ -285,7 +277,7 @@ CREATE TABLE `tbl_status_posting` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `tbl_status_posting`
+-- Dumping data for table `tbl_status_posting`
 --
 
 INSERT INTO `tbl_status_posting` (`status`, `target`) VALUES
@@ -295,7 +287,7 @@ INSERT INTO `tbl_status_posting` (`status`, `target`) VALUES
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `tbl_status_tugas`
+-- Table structure for table `tbl_status_tugas`
 --
 
 CREATE TABLE `tbl_status_tugas` (
@@ -304,7 +296,7 @@ CREATE TABLE `tbl_status_tugas` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `tbl_status_tugas`
+-- Dumping data for table `tbl_status_tugas`
 --
 
 INSERT INTO `tbl_status_tugas` (`status`, `isi`) VALUES
@@ -314,7 +306,7 @@ INSERT INTO `tbl_status_tugas` (`status`, `isi`) VALUES
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `tbl_tugas`
+-- Table structure for table `tbl_tugas`
 --
 
 CREATE TABLE `tbl_tugas` (
@@ -329,7 +321,7 @@ CREATE TABLE `tbl_tugas` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `tbl_tugas`
+-- Dumping data for table `tbl_tugas`
 --
 
 INSERT INTO `tbl_tugas` (`id_tugas`, `id_pengajar`, `judul_tugas`, `isi_tugas`, `direktori`, `waktu_mulai`, `waktu_selesai`, `status`) VALUES
@@ -341,7 +333,7 @@ INSERT INTO `tbl_tugas` (`id_tugas`, `id_pengajar`, `judul_tugas`, `isi_tugas`, 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `tbl_video`
+-- Table structure for table `tbl_video`
 --
 
 CREATE TABLE `tbl_video` (
@@ -354,7 +346,7 @@ CREATE TABLE `tbl_video` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `tbl_video`
+-- Dumping data for table `tbl_video`
 --
 
 INSERT INTO `tbl_video` (`id_video`, `id_pengajar`, `judul_video`, `isi_video`, `direktori`, `tgl_video`) VALUES
@@ -363,7 +355,7 @@ INSERT INTO `tbl_video` (`id_video`, `id_pengajar`, `judul_video`, `isi_video`, 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `tbl_votting`
+-- Table structure for table `tbl_votting`
 --
 
 CREATE TABLE `tbl_votting` (
@@ -377,7 +369,7 @@ CREATE TABLE `tbl_votting` (
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `tbl_votting_kandidat`
+-- Table structure for table `tbl_votting_kandidat`
 --
 
 CREATE TABLE `tbl_votting_kandidat` (
